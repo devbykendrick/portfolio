@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charles Rocha</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_7e6ByYtsRcfcq0wlDQnAx");
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- LANDING PAGE -->
+  <section id="landing-page" onmousemove="moveBackground(event)">
+    <nav>
+      <figure>
+        <img id="personal-logo" src="./assets/crlogo.png" alt="">
+      </figure>
+      <ul class="nav__link--list">
+        <li class="nav__link">
+          <a href="./assets/Charles Rocha -- Resume 2022.pdf" target="_blank" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">Resume</a>
+        </li>
+        <li class="nav__link">
+          <a href="#projects" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">Projects</a>
+        </li>
+        <li class="nav__link" onclick="toggleModal()">
+          <a href="#" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">Contact</a>
+        </li>
+        <li class="nav__link click" onclick="toggleContrast()">
+          <a href="#" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          "><i class="fas fa-adjust"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <header class="header">
+      <div class="header__content">
+        <h1 class="title">Hello</h1>
+        <h1 class="title teal">I'm Charles.</h1>
+        <p class="header__para">I'm a <b class="teal">Frontend Software Engineer</b> with a strong passion for
+          building web applications
+          with great user experiences.
+          <br>
+          Here's a bit more <b class="teal link__hover-effect link__hover-effect--teal click"
+            onclick="toggleModal()">about me.</b>
+        </p>
+        <div class="social__list">
+          <a href="https://www.linkedin.com/in/charlesrocha01/" target="_blank" class="social__link click">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/devbycharles" target="_blank" class="social__link click">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="./assets/Charles Rocha -- Resume 2022.pdf" target="_blank" class="social__link click">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- MODAL CONTACT -->
+    <a href="#">
+      <button class="mail__btn click" onclick="toggleModal()">
+        <i class="far fa-envelope"></i>
+      </button>
+    </a>
+    <a href="#projects" class="scroll">
+      <div class="scroll__icon click"></div>
+    </a>
+    <div class="modal">
+      <div class="modal__half modal__about">
+        <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+        <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
+        <p class="modal__para">
+          I'm a 24 year-old <span class="teal">frontend software engineer</span> with a strong passion for developing
+          websites with great <span class="teal">user experiences.</span>
+          <br>
+          I'm currently <span class="teal">learning</span> and <span class="teal">mastering</span> different
+          languages/frameworks to gain a better
+          understanding of all frontend
+          capabilities.
+        </p>
+        <div class="modal__languages">
+          <figure class="modal__language">
+            <img class="modal__language--img"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+              alt="">
+            <span class="language__name">HTML</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+              alt="">
+            <span class="language__name">CSS</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+              alt="">
+            <span class="language__name">JavaScript</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+              alt="">
+            <span class="language__name">React</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="./assets/bootsrap.png" alt="">
+            <span class="language__name">Bootstrap</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="./assets/materializecss.png" alt="">
+            <span class="language__name">Materialize</span>
+          </figure>
+        </div>
+      </div>
+      <div class="modal__half modal__contact">
+        <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+        <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+        <h3 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities.</h3>
+        <form id="contact__form" onsubmit="contact(event)">
+          <div class="form__item">
+            <label class="form__item--label">Name</label>
+            <input class="input" name="user_name" type="text" required></input>
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Email</label>
+            <input class="input" name="user_email" type="email" required></input>
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Message</label>
+            <textarea class="input" name="message" type="text" required></textarea>
+          </div>
+          <button id="contact__submit" class="form__submit">Send it my way</button>
+        </form>
+        <div class="modal__overlay modal__overlay--loading">
+          <i class="fas fa-spinner"></i>
+        </div>
+        <div class="modal__overlay modal__overlay--success">Thanks for the message! Looking forward to speaking to you
+          soon.</div>
+      </div>
+    </div>
+    <img src="./assets/semi circle.svg" class="shape shape--0">
+    <img src="./assets/circle.svg" class="shape shape--1">
+    <img src="./assets/squiggly.svg" class="shape shape--2">
+    <img src="./assets/circle.svg" class="shape shape--3">
+    <img src="./assets/triangle.svg" class="shape shape--4">
+    <img src="./assets/circle.svg" class="shape shape--5">
+    <img src="./assets/squiggly.svg" class="shape shape--6">
+    <img src="./assets/circle.svg" class="shape shape--7">
+    <img src="./assets/semi circle.svg" class="shape shape--8">
+  </section>
+
+
+  <!-- PROJECT SECTION -->
+  <section id="projects">
+    <div class="container">
+      <div class="row">
+        <h1 class="section__title">
+          Here are some of my <span class="teal">projects</span>
+        </h1>
+        <ul class="project__list">
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/project-four.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Sushi Restaurant
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS, JavaScript, React, React Router
+                </h4>
+                <p class="project__description--para">
+                  In this project, I built a website using React to simulate how a sushi restaurant would operate online. Users are able to add food items to their cart and view those items in the cart along with associated costs. The websites performance is also improved by incorporating React Router and lazy loading web pages that are not initially seen by the user.
+                </p>
+                <div class="project__description--links">
+                  <a href="https://github.com/devbycharles/sushi" class="project__description--link"
+                    target="_blank">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://surprise-sushi.netlify.app/" class="project__description--link" target="_blank">
+                    <i class="fas fa-desktop"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="project__wrapper">
+              <img src="./assets/project-five.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Messenger Application
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS, JavaScript, React
+                </h4>
+                <p class="project__description--para">
+                  Utilized a React library and Firebase to engineer a messenger where users can speak with each other. Users can join the site where they can create their own chatrooms and invite whom ever they want. 
+                </p>
+                <div class="project__description--links">
+                  <a href="https://github.com/devbycharles/messenger" class="project__description--link"
+                    target="_blank">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://developerchat.netlify.app" class="project__description--link" target="_blank">
+                    <i class="fas fa-desktop"></i>
+                  </a>
+                </div>
+              </div>
+            </div> -->
+            <div class="project__wrapper">
+              <img src="./assets/project-two.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  IP Address Map
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS, JavaScript (Axios)
+                </h4>
+                <p class="project__description--para">
+                  In this project, I developed a working IP address search tool by utilizing two different API's.
+                  LeafletJS is used to show the map. IPify allows the user to search for their desired IP
+                  Address. Developed to connect to backend API’s with Axios.
+                  <br>
+                  **design assets can be viewed in the link below**
+                </p>
+                <div class="project__description--links">
+                  <a href="https://github.com/devbycharles/ip-address-tracker" class="project__description--link"
+                    target="_blank">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://devbycharles.github.io/ip-address-tracker/" class="project__description--link"
+                    target="_blank">
+                    <i class=" fas fa-desktop"></i>
+                  </a>
+                  <a href="https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0"
+                    class="project__description--link" target="_blank">
+                    <i class="fas fa-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project__wrapper">
+              <img src="./assets/project-one.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Online Book Store
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS, JavaScript
+                </h4>
+                <p class="project__description--para">
+                  This is a online book store made to showcase my ability to develop a responsive landing page with
+                  products listed. Provides support for search engine optimization for higher indexing through Google’s
+                  search engine crawler. The entirety of the project was developed by me without following a guide.
+                  <br>
+                  **design assets can be viewed in the link below**
+                </p>
+                <div class="project__description--links">
+                  <a href="https://github.com/devbycharles/bookstore" class="project__description--link"
+                    target="_blank">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://devbycharles.github.io/bookstore/" class="project__description--link"
+                    target="_blank">
+                    <i class=" fas fa-desktop"></i>
+                  </a>
+                  <a href="https://frontendsimplified.com/projects/ecommerce" class="project__description--link"
+                    target="_blank">
+                    <i class="fas fa-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project__wrapper">
+              <img src="./assets/project-three.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Form Validation
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS, JavaScript, Bootstrap
+                </h4>
+                <p class="project__description--para">
+                  In this project, I built a form while ensuring that validation is required and designed with
+                  Bootstrap. This project is useful as most websites have forms that need to be filled out by the user
+                  for various asks including account creation, account sign-in, purchasing items, etc.
+                  <br>
+                  **design assets can be viewed in the link below**
+                </p>
+                <div class="project__description--links">
+                  <a href="https://github.com/devbycharles/form-valid" class="project__description--link"
+                    target="_blank">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://devbycharles.github.io/form-valid/" class="project__description--link"
+                    target="_blank">
+                    <i class="fas fa-desktop"></i>
+                  </a>
+                  <a href="https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1"
+                    class="project__description--link" target="_blank">
+                    <i class="fas fa-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row footer__row">
+        <figure>
+          <img class="footer__logo--img" src=./assets/crlogo.png alt="">
+        </figure>
+        <div class="footer__social--list">
+          <a href="https://github.com/devbycharles" target="_blank" class="footer__social--link
+        link__hover-effect
+        link__hover-effect--white
+        ">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/charlesrocha01/ target" target="_blank" class="footer__social--link
+        link__hover-effect
+        link__hover-effect--white
+        ">
+            LinkedIn
+          </a>
+          <a href="#" onclick="toggleModal()" class="footer__social--link
+        link__hover-effect
+        link__hover-effect--white
+        ">
+            Contact
+          </a>
+          <a href="./assets/Charles Rocha -- Resume 2022.pdf" target="_blank" class="
+          footer__social--link
+        link__hover-effect
+        link__hover-effect--white
+        ">
+            Resume
+          </a>
+        </div>
+        <div class="footer__copyright">Created by Charles Rocha 2022</div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
