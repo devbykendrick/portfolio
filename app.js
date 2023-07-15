@@ -1,7 +1,3 @@
-// template_8thajma
-// service_htru8ue
-// user_7e6ByYtsRcfcq0wlDQnAx
-
 let isModalOpen = false;
 let contrastToggle = false;
 const scaleFactor = 1 / 20;
@@ -37,10 +33,10 @@ function contact(event) {
 
   emailjs
     .sendForm(
-      "service_htru8ue",
-      "template_8thajma",
+      "service_724iwxd",
+      "template_gx6lohp",
       event.target,
-      "user_7e6ByYtsRcfcq0wlDQnAx"
+      "doZKOZvey8smaNwdt"
     )
     .then(() => {
       loading.classList.remove("modal__overlay--visible");
@@ -52,15 +48,6 @@ function contact(event) {
         "The email service is temporarily unavailable. Please contact me directly at devbycharles@gmail.com"
       );
     });
-
-  // const loading = document.querySelector('.modal__overlay--loading');
-  // const success = document.querySelector('.modal__overlay--success');
-  // loading.classList += ' modal__overlay--visible'
-  // setTimeout(() => {
-  //   loading.classList.remove('modal__overlay--visible');
-  //   success.classList += " modal__overlay--visible"
-  //   console.log('It worked')
-  // }, 1000);
 }
 
 function toggleModal() {
