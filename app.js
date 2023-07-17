@@ -53,10 +53,40 @@ function contact(event) {
 function toggleModal() {
   if (isModalOpen) {
     isModalOpen = false;
-    return document.body.classList.remove("modal--open");
+    return document.body.classList.remove("modal--open", "modal-open");
   }
   isModalOpen = true;
   //totgle modal
   console.log("toggleModal()");
   document.body.classList += " modal--open";
+  document.body.classList.add("modal-open");
 }
+
+/** VIDEO MODAL */
+var video = document.getElementById("video");
+
+document.getElementById("openModalBtn").addEventListener("click", function () {
+  document.getElementById("myModal").style.display = "block";
+  document.body.classList.add("modal-open");
+});
+
+document
+  .getElementsByClassName("close-vid")[0]
+  .addEventListener("click", function () {
+    document.getElementById("myModal").style.display = "none";
+    document.body.classList.remove("modal-open");
+    video.pause();
+  });
+
+window.addEventListener("click", function (event) {
+  var modal = document.getElementById("myModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+    video.pause();
+  }
+});
+
+window.addEventListener("DOMContentLoaded", function () {
+  video.pause();
+});

@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Charles Rocha</title>
+  <link rel="icon" type="image/x-icon" href="/assets/crlogo.png">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,13 +23,21 @@
 
   <!-- LANDING PAGE -->
   <section id="landing-page" onmousemove="moveBackground(event)">
+    <div id="myModal" class="modal-vid">
+      <span class="close-vid click">&times;</span>
+      <div class="modal-content-vid">
+          <video id="video" controls>
+              <source src="assets/hr-software-video.mp4" type="video/mp4">
+          </video>
+      </div>
+  </div>
     <nav>
-      <figure>
+      <a href="/">
         <img id="personal-logo" src="./assets/crlogo.png" alt="">
-      </figure>
+      </a>
       <ul class="nav__link--list">
         <li class="nav__link">
-          <a href="./assets/Charles Rocha -- Resume 2022.pdf" target="_blank" class="
+          <a href="./assets/Resume 2023.pdf" target="_blank" class="
             nav__link--anchor
             link__hover-effect
             link__hover-effect--black
@@ -73,7 +82,7 @@
           <a href="https://github.com/devbycharles" target="_blank" class="social__link click">
             <i class="fab fa-github"></i>
           </a>
-          <a href="./assets/Charles Rocha -- Resume 2022.pdf" target="_blank" class="social__link click">
+          <a href="./assets/Resume 2023.pdf" target="_blank" class="social__link click">
             <i class="fas fa-file-pdf"></i>
           </a>
         </div>
@@ -185,7 +194,7 @@
               <div class="project__wrapper--bg"></div>
               <div class="project__description">
                 <h3 class="project__description--title">
-                  Hiring HR Software
+                  HR Hiring Software
                 </h3>
                 <h4 class="project__description--sub-title">
                   Vue 3, Node, Express, MySQL, Sequelize/Typescript
@@ -202,10 +211,10 @@
                     target="_blank">
                     <i class="fab fa-github"></i>
                   </a>
-                  <a href="https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1"
+                  <a id="openModalBtn"
                     class="project__description--link" target="_blank">
                     <i class="fa-solid fa-circle-play"></i>
-                  </a>
+                </a>
                 </div>
               </div>
             </div>
@@ -255,10 +264,6 @@
                     target="_blank">
                     <i class=" fas fa-desktop"></i>
                   </a>
-                  <a href="https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0"
-                    class="project__description--link" target="_blank">
-                    <i class="fas fa-link"></i>
-                  </a>
                 </div>
               </div>
             </div>
@@ -276,8 +281,6 @@
                   This is a online book store made to showcase my ability to develop a responsive landing page with
                   products listed. Provides support for search engine optimization for higher indexing through Google’s
                   search engine crawler. The entirety of the project was developed by me without following a guide.
-                  <br>
-                  **design assets can be viewed in the link below**
                 </p>
                 <div class="project__description--links">
                   <a href="https://github.com/devbycharles/bookstore" class="project__description--link"
@@ -287,10 +290,6 @@
                   <a href="https://devbycharles.github.io/bookstore/" class="project__description--link"
                     target="_blank">
                     <i class=" fas fa-desktop"></i>
-                  </a>
-                  <a href="https://frontendsimplified.com/projects/ecommerce" class="project__description--link"
-                    target="_blank">
-                    <i class="fas fa-link"></i>
                   </a>
                 </div>
               </div>
@@ -306,9 +305,9 @@
   <footer>
     <div class="container">
       <div class="row footer__row">
-        <figure>
+        <a href="/">
           <img class="footer__logo--img" src=./assets/crlogo.png alt="">
-        </figure>
+        </a>
         <div class="footer__social--list">
           <a href="https://github.com/devbycharles" target="_blank" class="footer__social--link
         link__hover-effect
@@ -328,7 +327,7 @@
         ">
             Contact
           </a>
-          <a href="./assets/Charles Rocha -- Resume 2022.pdf" target="_blank" class="
+          <a href="./assets/Resume 2023.pdf" target="_blank" class="
           footer__social--link
         link__hover-effect
         link__hover-effect--white
@@ -336,7 +335,7 @@
             Resume
           </a>
         </div>
-        <div class="footer__copyright">Created by Charles Rocha 2023</div>
+        <div class="footer__copyright">Developed by Charles Rocha 2023</div>
       </div>
     </div>
   </footer>
