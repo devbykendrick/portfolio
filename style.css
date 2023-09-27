@@ -195,8 +195,8 @@ li {
 }
 
 #personal-logo {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   filter: invert(1);
 }
 
@@ -721,7 +721,7 @@ footer {
 }
 
 .footer__logo--img {
-  width: 70px;
+  width: 100px;
 }
 
 .footer__social--list {

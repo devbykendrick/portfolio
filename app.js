@@ -45,7 +45,7 @@ function contact(event) {
     .catch(() => {
       loading.classList.remove("modal__overlay--visible");
       alert(
-        "The email service is temporarily unavailable. Please contact me directly at devbycharles@gmail.com"
+        "The email service is temporarily unavailable. Please contact me directly at devbykendrick@gmail.com"
       );
     });
 }
