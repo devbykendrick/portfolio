@@ -1,5 +1,5 @@
 # Portfolio
-- https://devbycharles.github.io/portfolio/
+- https://devbykendrick.github.io/portfolio/
 
 ## Project
 - Designed, developed, and hosted 5 projects using semantic HTML5, CSS3 and JavaScript ES6+. All projects are engineered to be scalable, responsive, multi-platform and SEO friendly. Design assets were gathered through various sites to simulate working with a design team.
