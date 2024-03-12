@@ -56,7 +56,7 @@ function toggleModal() {
     return document.body.classList.remove("modal--open", "modal-open");
   }
   isModalOpen = true;
-  //totgle modal
+  //toggle modal
   console.log("toggleModal()");
   document.body.classList += " modal--open";
   document.body.classList.add("modal-open");
@@ -80,6 +80,37 @@ document
 
 window.addEventListener("click", function (event) {
   var modal = document.getElementById("myModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+    video.pause();
+  }
+});
+
+window.addEventListener("DOMContentLoaded", function () {
+  video.pause();
+});
+
+/** SCRATCH PAD VIDEO MODAL */
+var video = document.getElementById("scratch-pad-video");
+
+document
+  .getElementById("openScratchPadModal")
+  .addEventListener("click", function () {
+    document.getElementById("scratchPadModal").style.display = "block";
+    document.body.classList.add("modal-open");
+  });
+
+document
+  .getElementsByClassName("close-vid")[0]
+  .addEventListener("click", function () {
+    document.getElementById("scratchPadModal").style.display = "none";
+    document.body.classList.remove("modal-open");
+    video.pause();
+  });
+
+window.addEventListener("click", function (event) {
+  var modal = document.getElementById("scratchPadModal");
   if (event.target == modal) {
     modal.style.display = "none";
     document.body.classList.remove("modal-open");
